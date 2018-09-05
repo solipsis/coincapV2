@@ -1,3 +1,4 @@
+// Package coincap provides a client for interacting with the CoinCap V2 API
 package coincap
 
 import (

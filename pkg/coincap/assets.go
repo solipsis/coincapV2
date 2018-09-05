@@ -9,24 +9,24 @@ import (
 // AssetsRequest contains the paramaters for modifying a query to
 // the "/assets" endpoint. Search can be a symbol (BTC) or an asset id (bitcoin)
 type AssetsRequest struct {
-	Search string `json:"search,omitempty"`
-	Limit  int    `json:"limit,omitempty"`
-	Offset int    `json:"offset,omitempty"`
+	Search string `json:"search,omitempty"` // search by asset id (bitcoin) or symbol (BTC)
+	Limit  int    `json:"limit,omitempty"`  // limit number of returned results (Max: 2000)
+	Offset int    `json:"offset,omitempty"` // skip the first N entries of the result set
 }
 
 // Asset contains various information about a given CoinCap asset such as Bitcoin
 type Asset struct {
-	ID                string `json:"id"`
-	Rank              string `json:"rank"`
-	Symbol            string `json:"symbol"`
-	Name              string `json:"name"`
-	Supply            string `json:"supply"`
-	MaxSupply         string `json:"maxSupply"`
-	MarketCapUsd      string `json:"marketCapUsd"`
-	VolumeUsd24Hr     string `json:"volumeUsd24Hr"`
-	PriceUsd          string `json:"priceUsd"`
-	ChangePercent24Hr string `json:"changePercent24Hr"`
-	Vwap24Hr          string `json:"vwap24Hr"`
+	ID                string `json:"id"`                // unique identifier for asset
+	Rank              string `json:"rank"`              // rank in terms of the asset's market cap
+	Symbol            string `json:"symbol"`            // common symbol to identify the asset
+	Name              string `json:"name"`              // proper name for asset
+	Supply            string `json:"supply"`            // available supply for trading
+	MaxSupply         string `json:"maxSupply"`         // total quantity of asset issued
+	MarketCapUsd      string `json:"marketCapUsd"`      // supply x price
+	VolumeUsd24Hr     string `json:"volumeUsd24Hr"`     // quantity of trading volume in USD over last 24 hours
+	PriceUsd          string `json:"priceUsd"`          // volume weighted price of the asset in USD
+	ChangePercent24Hr string `json:"changePercent24Hr"` // percent change in value in the last 24 hours
+	Vwap24Hr          string `json:"vwap24Hr"`          // Volume Weighted Average Price in the last 24 hours
 }
 
 // Assets returns a list of CoinCap Asset entries filtered by the request's
@@ -94,8 +94,8 @@ type AssetHistoryRequest struct {
 
 // AssetHistory contains the USD price of an asset at a given timestamp
 type AssetHistory struct {
-	PriceUSD string    `json:"priceUsd"`
-	Time     Timestamp `json:"time"`
+	PriceUSD string    `json:"priceUsd"` // volume weighted price in USD
+	Time     Timestamp `json:"time"`     // Timestamp correlating to the given price
 }
 
 // AssetHistoryByID returns USD price history of a given asset.
