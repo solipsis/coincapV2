@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-// Client
+// Client is a rest client for the CoinCap V2 API
 type Client struct {
 	baseURL    string
 	httpClient *http.Client
@@ -19,6 +19,10 @@ type Client struct {
 func NewClient(httpClient *http.Client) *Client {
 	if httpClient == nil {
 		httpClient = http.DefaultClient
+	}
+	return &Client{
+		httpClient: httpClient,
+		baseURL:    baseURL,
 	}
 }
 
@@ -31,13 +35,14 @@ func (c *Client) SetBaseURL(baseURL string) {
 // and a unix timestamp in milliseconds
 type coincapResp struct {
 	Data      *json.RawMessage `json:"data"`
-	Timestamp Timestamp        `json:"timestamp"`
+	Timestamp *Timestamp       `json:"timestamp"`
 }
 
 // fetchAndParse returns the json below the top level "data" key
 // returned by the coincap api
 func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 
+	fmt.Println(req.URL)
 	// make request to the api and read the response
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
@@ -52,13 +57,23 @@ func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 	if resp.StatusCode != 200 {
 		return nil, fmt.Errorf("Error received status: %d, with body: %s", resp.StatusCode, string(body))
 	}
-	fmt.Println("Body:", string(body))
+
+	//fmt.Println("body:", pretty(string(body)))
 
 	// parse the result
 	ccResp := new(coincapResp)
 	if err := json.Unmarshal(body, ccResp); err != nil {
 		return nil, err
 	}
+
+	// ensure we got both the data object and the timestamp
+	if ccResp.Data == nil {
+		return ccResp, fmt.Errorf(`Response is missing "data" payload`)
+	}
+	if ccResp.Timestamp == nil {
+		return ccResp, fmt.Errorf(`Response is missing required "timestamp"`)
+	}
+	fmt.Println("pretty:", pretty(ccResp))
 
 	return ccResp, nil
 }

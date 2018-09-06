@@ -1,0 +1,13 @@
+{
+    "data": [
+        {
+            "id": "romanian-leu",
+            "symbol": "RON",
+            "currencySymbol": "lei",
+            "type": "fiat",
+            "rateUsd": "0.2505529076289101"
+        },
+        {
+            "id": "falkland-islands-pound",
+            "symbol": "FKP",
+

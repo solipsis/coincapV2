@@ -87,5 +87,5 @@ func (c *Client) Markets(reqParams *MarketsRequest) ([]*Market, *Timestamp, erro
 	var markets []*Market
 	json.Unmarshal(*ccResp.Data, &markets)
 
-	return markets, &ccResp.Timestamp, nil
+	return markets, ccResp.Timestamp, nil
 }

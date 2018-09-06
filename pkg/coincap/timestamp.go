@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// Timestamp is wrapper around time.Time with custom unmarshaling behaviour
+// Timestamp is wrapper around time.Time with custom marshaling behaviour
 // specific to the format returned by the CoinCap API
 type Timestamp struct {
 	time.Time
@@ -20,7 +20,12 @@ func (t *Timestamp) UnmarshalJSON(b []byte) error {
 	if err != nil {
 		return err
 	}
-	// Convert from milleseconds to nanoseconds
+	// Convert from milliseconds to nanoseconds
 	t.Time = time.Unix(0, m*1e6)
 	return nil
+}
+
+// MarshalJSON implements json.Marshaler
+func (t *Timestamp) MarshalJSON() ([]byte, error) {
+	return []byte(strconv.Itoa(int(t.UnixNano() / 1e6))), nil // convert to milliseconds
 }

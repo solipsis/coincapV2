@@ -37,7 +37,7 @@ func (c *Client) Exchanges() ([]*Exchange, *Timestamp, error) {
 	var exchanges []*Exchange
 	json.Unmarshal(*ccResp.Data, &exchanges)
 
-	return exchanges, &ccResp.Timestamp, nil
+	return exchanges, ccResp.Timestamp, nil
 }
 
 // ExchangeByID returns exchange data for an exchange with the given unique ID.
@@ -59,5 +59,5 @@ func (c *Client) ExchangeByID(id string) (*Exchange, *Timestamp, error) {
 	var exchange *Exchange
 	json.Unmarshal(*ccResp.Data, &exchange)
 
-	return exchange, &ccResp.Timestamp, nil
+	return exchange, ccResp.Timestamp, nil
 }

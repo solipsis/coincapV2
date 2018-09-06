@@ -85,5 +85,5 @@ func (c *Client) Candles(reqParams *CandlesRequest) ([]*Candle, *Timestamp, erro
 	var candles []*Candle
 	json.Unmarshal(*ccResp.Data, &candles)
 
-	return candles, &ccResp.Timestamp, nil
+	return candles, ccResp.Timestamp, nil
 }
