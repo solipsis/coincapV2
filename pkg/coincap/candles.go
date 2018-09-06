@@ -49,7 +49,7 @@ func (c *Client) Candles(reqParams *CandlesRequest) ([]*Candle, *Timestamp, erro
 	}
 
 	// Prepare the query
-	req, err := http.NewRequest("GET", baseURL+"candles", nil)
+	req, err := http.NewRequest("GET", c.baseURL+"/candles", nil)
 	if err != nil {
 		return nil, nil, err
 	}

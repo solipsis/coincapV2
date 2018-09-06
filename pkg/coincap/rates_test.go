@@ -67,6 +67,22 @@ func TestRates(t *testing.T) {
 	}
 }
 
+func TestRatesBadURL(t *testing.T) {
+	teardown := setup()
+	defer teardown()
+
+	client.SetBaseURL("bad.fail:")
+	_, _, err := client.Rates()
+	if err == nil {
+		t.Errorf("Expected client to fail on Rates() because of bad base path")
+	}
+	_, _, err = client.RateByID("bitcoin")
+	if err == nil {
+		t.Errorf("Expected client to fail on RateByID() because of bad base path")
+	}
+
+}
+
 func TestRateByID(t *testing.T) {
 	teardown := setup()
 	defer teardown()
