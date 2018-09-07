@@ -1,0 +1,30 @@
+{
+    "data": [{
+        "exchangeId": "binance",
+        "rank": "4",
+        "baseSymbol": "ETH",
+        "baseId": "ethereum",
+        "quoteSymbol": "BTC",
+        "quoteId": "bitcoin",
+        "priceQuote": "0.0338800000000000",
+        "priceUsd": "218.1934525554543856",
+        "volumeUsd24Hr": "57626585.5284415014432962",
+        "percentExchangeVolume": "5.6111904082846202",
+        "tradesCount24Hr": "190736",
+        "updated": 1536341130352
+    },{
+       "exchangeId": "binance",
+        "rank": "4",
+        "baseSymbol": "ETH",
+        "baseId": "ethereum",
+        "quoteSymbol": "BTC",
+        "quoteId": "bitcoin",
+        "priceQuote": "0.0338800000000000",
+        "priceUsd": "218.1934525554543856",
+        "volumeUsd24Hr": "57626585.5284415014432962",
+        "percentExchangeVolume": "5.6111904082846202",
+        "tradesCount24Hr": "190736",
+        "updated": 1536341130352
+    }], 
+    "timestamp": 1536341137844
+}

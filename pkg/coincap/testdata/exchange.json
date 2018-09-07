@@ -1,0 +1,626 @@
+{
+    "data": [
+        {
+            "id": "binance",
+            "name": "Binance",
+            "rank": "1",
+            "percentTotalVolume": "16.903027981466749702000000000000000000",
+            "volumeUsd": "1034850514.6425770861221546",
+            "tradingPairs": "375",
+            "socket": true,
+            "updated": 1536336916333
+        },
+        {
+            "id": "okex",
+            "name": "Okex",
+            "rank": "2",
+            "percentTotalVolume": "16.658795078314847425000000000000000000",
+            "volumeUsd": "1019897895.1594574108800681",
+            "tradingPairs": "533",
+            "socket": false,
+            "updated": 1536336915812
+        },
+        {
+            "id": "huobi",
+            "name": "Huobi",
+            "rank": "3",
+            "percentTotalVolume": "10.330527433971347645000000000000000000",
+            "volumeUsd": "632463700.7816657737020602",
+            "tradingPairs": "271",
+            "socket": true,
+            "updated": 1536336915732
+        },
+        {
+            "id": "bithumb",
+            "name": "Bithumb",
+            "rank": "4",
+            "percentTotalVolume": "7.208320089011231562000000000000000000",
+            "volumeUsd": "441313459.4583096505928451",
+            "tradingPairs": "26",
+            "socket": false,
+            "updated": 1536336903902
+        },
+        {
+            "id": "bitfinex",
+            "name": "Bitfinex",
+            "rank": "5",
+            "percentTotalVolume": "6.587571851979438228000000000000000000",
+            "volumeUsd": "403309521.1544649039516136",
+            "tradingPairs": "260",
+            "socket": true,
+            "updated": 1536336912447
+        },
+        {
+            "id": "zb",
+            "name": "ZB",
+            "rank": "6",
+            "percentTotalVolume": "4.562977546130637695000000000000000000",
+            "volumeUsd": "279358211.2680183454262858",
+            "tradingPairs": "39",
+            "socket": true,
+            "updated": 1536336915650
+        },
+        {
+            "id": "lbank",
+            "name": "LBank",
+            "rank": "7",
+            "percentTotalVolume": "4.269679239529130993000000000000000000",
+            "volumeUsd": "261401670.9449970127334744",
+            "tradingPairs": "106",
+            "socket": false,
+            "updated": 1536336915280
+        },
+        {
+            "id": "hitbtc",
+            "name": "HitBTC",
+            "rank": "8",
+            "percentTotalVolume": "4.074948632583239734000000000000000000",
+            "volumeUsd": "249479720.0947961218349001",
+            "tradingPairs": "764",
+            "socket": true,
+            "updated": 1536336916211
+        },
+        {
+            "id": "bibox",
+            "name": "Bibox",
+            "rank": "9",
+            "percentTotalVolume": "2.913429703932037304000000000000000000",
+            "volumeUsd": "178368291.8702367406002952",
+            "tradingPairs": "192",
+            "socket": false,
+            "updated": 1536336901407
+        },
+        {
+            "id": "coinbene",
+            "name": "Coinbene",
+            "rank": "10",
+            "percentTotalVolume": "2.392592615505812476000000000000000000",
+            "volumeUsd": "146481192.7307339377639478",
+            "tradingPairs": "104",
+            "socket": false,
+            "updated": 1536336914691
+        },
+        {
+            "id": "gdax",
+            "name": "Gdax",
+            "rank": "11",
+            "percentTotalVolume": "2.237499515617900136000000000000000000",
+            "volumeUsd": "136985960.6094538799526652",
+            "tradingPairs": "15",
+            "socket": true,
+            "updated": 1536336900230
+        },
+        {
+            "id": "quoine",
+            "name": "Quoine",
+            "rank": "12",
+            "percentTotalVolume": "1.968574280457278245000000000000000000",
+            "volumeUsd": "120521607.6952018533767197",
+            "tradingPairs": "28",
+            "socket": false,
+            "updated": 1536336916271
+        },
+        {
+            "id": "bitstamp",
+            "name": "Bitstamp",
+            "rank": "13",
+            "percentTotalVolume": "1.450318159800586950000000000000000000",
+            "volumeUsd": "88792522.6007273256330094",
+            "tradingPairs": "15",
+            "socket": true,
+            "updated": 1536336898992
+        },
+        {
+            "id": "allcoin",
+            "name": "Allcoin",
+            "rank": "14",
+            "percentTotalVolume": "1.438926090430284549000000000000000000",
+            "volumeUsd": "88095068.3420212835471495",
+            "tradingPairs": "69",
+            "socket": false,
+            "updated": 1536336914990
+        },
+        {
+            "id": "kraken",
+            "name": "Kraken",
+            "rank": "15",
+            "percentTotalVolume": "1.251246716070447295000000000000000000",
+            "volumeUsd": "76604813.6162392381747501",
+            "tradingPairs": "57",
+            "socket": false,
+            "updated": 1536336915783
+        },
+        {
+            "id": "coinegg",
+            "name": "CoinEgg",
+            "rank": "16",
+            "percentTotalVolume": "1.229645004052597993000000000000000000",
+            "volumeUsd": "75282296.5605174685014374",
+            "tradingPairs": "151",
+            "socket": false,
+            "updated": 1536336891776
+        },
+        {
+            "id": "zaif",
+            "name": "Zaif",
+            "rank": "17",
+            "percentTotalVolume": "1.174394256403394783000000000000000000",
+            "volumeUsd": "71899691.6981309327817164",
+            "tradingPairs": "24",
+            "socket": false,
+            "updated": 1536336900788
+        },
+        {
+            "id": "bitbank",
+            "name": "Bitbank",
+            "rank": "18",
+            "percentTotalVolume": "1.066306963978694348000000000000000000",
+            "volumeUsd": "65282286.2063654336439660",
+            "tradingPairs": "8",
+            "socket": false,
+            "updated": 1536336895744
+        },
+        {
+            "id": "gate",
+            "name": "Gate",
+            "rank": "19",
+            "percentTotalVolume": "1.044471635075176123000000000000000000",
+            "volumeUsd": "63945466.4733583423306781",
+            "tradingPairs": "351",
+            "socket": false,
+            "updated": 1536336887438
+        },
+        {
+            "id": "bitflyer",
+            "name": "Bitflyer",
+            "rank": "20",
+            "percentTotalVolume": "0.889764702807009803000000000000000000",
+            "volumeUsd": "54473876.6107594294489795",
+            "tradingPairs": "4",
+            "socket": false,
+            "updated": 1536336893287
+        },
+        {
+            "id": "bittrex",
+            "name": "Bittrex",
+            "rank": "21",
+            "percentTotalVolume": "0.668194501035575056000000000000000000",
+            "volumeUsd": "40908730.9111821032108300",
+            "tradingPairs": "276",
+            "socket": false,
+            "updated": 1536336914972
+        },
+        {
+            "id": "btcbox",
+            "name": "BTCBOX",
+            "rank": "22",
+            "percentTotalVolume": "0.656050764177488826000000000000000000",
+            "volumeUsd": "40165257.4725145729769764",
+            "tradingPairs": "1",
+            "socket": false,
+            "updated": 1536336907169
+        },
+        {
+            "id": "gemini",
+            "name": "Gemini",
+            "rank": "23",
+            "percentTotalVolume": "0.617741671837190601000000000000000000",
+            "volumeUsd": "37819867.9974858789230117",
+            "tradingPairs": "6",
+            "socket": true,
+            "updated": 1536336915252
+        },
+        {
+            "id": "poloniex",
+            "name": "Poloniex",
+            "rank": "24",
+            "percentTotalVolume": "0.582589115497271020000000000000000000",
+            "volumeUsd": "35667730.4598059988245778",
+            "tradingPairs": "102",
+            "socket": true,
+            "updated": 1536336916175
+        },
+        {
+            "id": "sistemkoin",
+            "name": "Sistemkoin",
+            "rank": "25",
+            "percentTotalVolume": "0.572616101758306342000000000000000000",
+            "volumeUsd": "35057154.7445187117724507",
+            "tradingPairs": "141",
+            "socket": false,
+            "updated": 1536336888394
+        },
+        {
+            "id": "exmo",
+            "name": "Exmo",
+            "rank": "26",
+            "percentTotalVolume": "0.477860022717433134000000000000000000",
+            "volumeUsd": "29255923.3161334529167900",
+            "tradingPairs": "77",
+            "socket": false,
+            "updated": 1536336916211
+        },
+        {
+            "id": "bigone",
+            "name": "BigONE",
+            "rank": "27",
+            "percentTotalVolume": "0.436697681777094943000000000000000000",
+            "volumeUsd": "26735850.0042565899582364",
+            "tradingPairs": "69",
+            "socket": false,
+            "updated": 1536336916248
+        },
+        {
+            "id": "ooobtc",
+            "name": "OOOBTC",
+            "rank": "28",
+            "percentTotalVolume": "0.396007360733668419000000000000000000",
+            "volumeUsd": "24244675.0669062411944019",
+            "tradingPairs": "26",
+            "socket": false,
+            "updated": 1536336870819
+        },
+        {
+            "id": "coinone",
+            "name": "Coinone",
+            "rank": "29",
+            "percentTotalVolume": "0.312870070871311681000000000000000000",
+            "volumeUsd": "19154778.3161949894767355",
+            "tradingPairs": "15",
+            "socket": false,
+            "updated": 1536336868926
+        },
+        {
+            "id": "itbit",
+            "name": "Itbit",
+            "rank": "30",
+            "percentTotalVolume": "0.276629370248487953000000000000000000",
+            "volumeUsd": "16936021.5507410439892983",
+            "tradingPairs": "2",
+            "socket": false,
+            "updated": 1536336916123
+        },
+        {
+            "id": "bitbay",
+            "name": "BitBay",
+            "rank": "31",
+            "percentTotalVolume": "0.266925685857714604000000000000000000",
+            "volumeUsd": "16341934.9292947978845009",
+            "tradingPairs": "37",
+            "socket": false,
+            "updated": 1536336892027
+        },
+        {
+            "id": "livecoin",
+            "name": "Livecoin",
+            "rank": "32",
+            "percentTotalVolume": "0.245336505977932879000000000000000000",
+            "volumeUsd": "15020185.1260169704789531",
+            "tradingPairs": "316",
+            "socket": false,
+            "updated": 1536336864799
+        },
+        {
+            "id": "coinexchange",
+            "name": "CoinExchange",
+            "rank": "33",
+            "percentTotalVolume": "0.242661240713871308000000000000000000",
+            "volumeUsd": "14856397.9253831528997633",
+            "tradingPairs": "370",
+            "socket": false,
+            "updated": 1536336916211
+        },
+        {
+            "id": "kucoin",
+            "name": "Kucoin",
+            "rank": "34",
+            "percentTotalVolume": "0.223698471228974821000000000000000000",
+            "volumeUsd": "13695444.2913946196077511",
+            "tradingPairs": "368",
+            "socket": false,
+            "updated": 1536336874233
+        },
+        {
+            "id": "lakebtc",
+            "name": "Lakebtc",
+            "rank": "35",
+            "percentTotalVolume": "0.161345280714582542000000000000000000",
+            "volumeUsd": "9878008.0684779323041841",
+            "tradingPairs": "17",
+            "socket": false,
+            "updated": 1536336899954
+        },
+        {
+            "id": "korbit",
+            "name": "Korbit",
+            "rank": "36",
+            "percentTotalVolume": "0.142790530314988663000000000000000000",
+            "volumeUsd": "8742034.5008344561792852",
+            "tradingPairs": "5",
+            "socket": false,
+            "updated": 1536336896365
+        },
+        {
+            "id": "cex",
+            "name": "Cex",
+            "rank": "37",
+            "percentTotalVolume": "0.110079359257652576000000000000000000",
+            "volumeUsd": "6739365.3790438758227201",
+            "tradingPairs": "15",
+            "socket": false,
+            "updated": 1536336885427
+        },
+        {
+            "id": "btcturk",
+            "name": "BTCTurk",
+            "rank": "38",
+            "percentTotalVolume": "0.090319994901272747000000000000000000",
+            "volumeUsd": "5529641.9853637632137056",
+            "tradingPairs": "5",
+            "socket": false,
+            "updated": 1536336901070
+        },
+        {
+            "id": "quadrigacx",
+            "name": "QuadrigaCX",
+            "rank": "39",
+            "percentTotalVolume": "0.071840219763193764000000000000000000",
+            "volumeUsd": "4398258.6123321177835084",
+            "tradingPairs": "10",
+            "socket": false,
+            "updated": 1536336915530
+        },
+        {
+            "id": "cryptopia",
+            "name": "Cryptopia",
+            "rank": "40",
+            "percentTotalVolume": "0.061982691744557717000000000000000000",
+            "volumeUsd": "3794753.2549266841253603",
+            "tradingPairs": "936",
+            "socket": false,
+            "updated": 1536336916271
+        },
+        {
+            "id": "idex",
+            "name": "IDEX",
+            "rank": "41",
+            "percentTotalVolume": "0.054638122774534155000000000000000000",
+            "volumeUsd": "3345098.2589821495564427",
+            "tradingPairs": "294",
+            "socket": false,
+            "updated": 1536336916211
+        },
+        {
+            "id": "tidex",
+            "name": "Tidex",
+            "rank": "42",
+            "percentTotalVolume": "0.053343993549405482000000000000000000",
+            "volumeUsd": "3265868.0585644019288747",
+            "tradingPairs": "79",
+            "socket": false,
+            "updated": 1536336916003
+        },
+        {
+            "id": "independentreserve",
+            "name": "Independent Reserve",
+            "rank": "43",
+            "percentTotalVolume": "0.046163924554454648000000000000000000",
+            "volumeUsd": "2826284.2098752203546527",
+            "tradingPairs": "15",
+            "socket": false,
+            "updated": 1536336914990
+        },
+        {
+            "id": "btcmarket",
+            "name": "BTCMarket",
+            "rank": "44",
+            "percentTotalVolume": "0.040334036757796872000000000000000000",
+            "volumeUsd": "2469362.2197267863468112",
+            "tradingPairs": "11",
+            "socket": false,
+            "updated": 1536336895443
+        },
+        {
+            "id": "luno",
+            "name": "Luno",
+            "rank": "45",
+            "percentTotalVolume": "0.039555636568404788000000000000000000",
+            "volumeUsd": "2421706.3892168034657003",
+            "tradingPairs": "6",
+            "socket": true,
+            "updated": 1536336914190
+        },
+        {
+            "id": "bxinth",
+            "name": "Bxinth",
+            "rank": "46",
+            "percentTotalVolume": "0.035811126466008124000000000000000000",
+            "volumeUsd": "2192457.0375149514922856",
+            "tradingPairs": "22",
+            "socket": false,
+            "updated": 1536336863117
+        },
+        {
+            "id": "bitso",
+            "name": "Bitso",
+            "rank": "47",
+            "percentTotalVolume": "0.033019212138320952000000000000000000",
+            "volumeUsd": "2021528.2558781393702686",
+            "tradingPairs": "11",
+            "socket": true,
+            "updated": 1536336909804
+        },
+        {
+            "id": "wex",
+            "name": "Wex",
+            "rank": "48",
+            "percentTotalVolume": "0.018122602511869386000000000000000000",
+            "volumeUsd": "1109516.2687202456832790",
+            "tradingPairs": "39",
+            "socket": false,
+            "updated": 1536336915194
+        },
+        {
+            "id": "acx",
+            "name": "ACX",
+            "rank": "49",
+            "percentTotalVolume": "0.015992104434959330000000000000000000",
+            "volumeUsd": "979081.2346096249729192",
+            "tradingPairs": "8",
+            "socket": false,
+            "updated": 1536336901975
+        },
+        {
+            "id": "okcoin",
+            "name": "OkCoin",
+            "rank": "50",
+            "percentTotalVolume": "0.015195722149053656000000000000000000",
+            "volumeUsd": "930324.4900000000000000",
+            "tradingPairs": "5",
+            "socket": false,
+            "updated": 1536336911647
+        },
+        {
+            "id": "lykke",
+            "name": "Lykke",
+            "rank": "51",
+            "percentTotalVolume": "0.015189203349754327000000000000000000",
+            "volumeUsd": "929925.3909263216767050",
+            "tradingPairs": "45",
+            "socket": false,
+            "updated": 1536336874105
+        },
+        {
+            "id": "mercado",
+            "name": "Mercado",
+            "rank": "52",
+            "percentTotalVolume": "0.014718634772454502000000000000000000",
+            "volumeUsd": "901115.8702340952105804",
+            "tradingPairs": "3",
+            "socket": false,
+            "updated": 1536336893397
+        },
+        {
+            "id": "bitmarket",
+            "name": "Bitmarket",
+            "rank": "53",
+            "percentTotalVolume": "0.0098959513167415543337000000000000000000",
+            "volumeUsd": "605857.7388759220530529",
+            "tradingPairs": "6",
+            "socket": false,
+            "updated": 1536336914888
+        },
+        {
+            "id": "coinmate",
+            "name": "Coinmate",
+            "rank": "54",
+            "percentTotalVolume": "0.0084027695677428427893000000000000000000",
+            "volumeUsd": "514440.9878002881764804",
+            "tradingPairs": "4",
+            "socket": true,
+            "updated": 1536336908583
+        },
+        {
+            "id": "tradesatoshi",
+            "name": "TradeSatoshi",
+            "rank": "55",
+            "percentTotalVolume": "0.0077279261173338193453000000000000000000",
+            "volumeUsd": "473125.1896649087410709",
+            "tradingPairs": "352",
+            "socket": false,
+            "updated": 1536336916175
+        },
+        {
+            "id": "therocktrading",
+            "name": "The Rock Trading",
+            "rank": "56",
+            "percentTotalVolume": "0.0068955764585153235918000000000000000000",
+            "volumeUsd": "422166.4221745321426039",
+            "tradingPairs": "16",
+            "socket": true,
+            "updated": 1536336897209
+        },
+        {
+            "id": "kuna",
+            "name": "Kuna",
+            "rank": "57",
+            "percentTotalVolume": "0.0041889254393097035375000000000000000000",
+            "volumeUsd": "256457.6980776476689949",
+            "tradingPairs": "23",
+            "socket": false,
+            "updated": 1536336893128
+        },
+        {
+            "id": "braziliex",
+            "name": "Braziliex",
+            "rank": "58",
+            "percentTotalVolume": "0.0032819286749890198119000000000000000000",
+            "volumeUsd": "200928.8266017474796286",
+            "tradingPairs": "43",
+            "socket": false,
+            "updated": 1536336879699
+        },
+        {
+            "id": "btctradeua",
+            "name": "BTC Trade UA",
+            "rank": "59",
+            "percentTotalVolume": "0.0023273653774193974377000000000000000000",
+            "volumeUsd": "142487.7992998971038451",
+            "tradingPairs": "17",
+            "socket": false,
+            "updated": 1536336862442
+        },
+        {
+            "id": "coinnest",
+            "name": "Coinnest",
+            "rank": "60",
+            "percentTotalVolume": "0.0019413266188703899799000000000000000000",
+            "volumeUsd": "118853.4298606200934207",
+            "tradingPairs": "19",
+            "socket": false,
+            "updated": 1536336915360
+        },
+        {
+            "id": "bleutrade",
+            "name": "Bleutrade",
+            "rank": "61",
+            "percentTotalVolume": "0.0010257206540276487272000000000000000000",
+            "volumeUsd": "62797.4791181718709326",
+            "tradingPairs": "95",
+            "socket": false,
+            "updated": 1536336870655
+        },
+        {
+            "id": "gatecoin",
+            "name": "Gatecoin",
+            "rank": "62",
+            "percentTotalVolume": "0.0009395987679768119846000000000000000000",
+            "volumeUsd": "57524.8570649269370664",
+            "tradingPairs": "10",
+            "socket": false,
+            "updated": 1536336906748
+        }
+    ],
+    "timestamp": 1536336928185
+}
+

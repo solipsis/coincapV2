@@ -1,0 +1,13 @@
+{
+	"data" :{
+            "id": "gdax",
+            "name": "Gdax",
+            "rank": "11",
+            "percentTotalVolume": "2.237499515617900136000000000000000000",
+            "volumeUsd": "136985960.6094538799526652",
+            "tradingPairs": "15",
+            "socket": true,
+            "updated": 1536336900230
+	},
+	"timestamp" : 12345678910
+}

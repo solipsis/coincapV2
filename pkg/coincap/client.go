@@ -73,7 +73,7 @@ func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 	if ccResp.Timestamp == nil {
 		return ccResp, fmt.Errorf(`Response is missing required "timestamp"`)
 	}
-	fmt.Println("pretty:", pretty(ccResp))
+	//fmt.Println("pretty:", pretty(ccResp))
 
 	return ccResp, nil
 }

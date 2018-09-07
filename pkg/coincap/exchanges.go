@@ -22,7 +22,7 @@ type Exchange struct {
 // GET /exchanges
 func (c *Client) Exchanges() ([]*Exchange, *Timestamp, error) {
 
-	req, err := http.NewRequest("GET", baseURL+"exchanges", nil)
+	req, err := http.NewRequest("GET", c.baseURL+"/exchanges", nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -44,7 +44,7 @@ func (c *Client) Exchanges() ([]*Exchange, *Timestamp, error) {
 // GET /exchanges/{{id}}
 func (c *Client) ExchangeByID(id string) (*Exchange, *Timestamp, error) {
 
-	req, err := http.NewRequest("GET", baseURL+"exchanges/"+id, nil)
+	req, err := http.NewRequest("GET", c.baseURL+"/exchanges/"+id, nil)
 	if err != nil {
 		return nil, nil, err
 	}
