@@ -29,3 +29,8 @@ func (t *Timestamp) UnmarshalJSON(b []byte) error {
 func (t *Timestamp) MarshalJSON() ([]byte, error) {
 	return []byte(strconv.Itoa(int(t.UnixNano() / 1e6))), nil // convert to milliseconds
 }
+
+// String implements stringer
+func (t *Timestamp) String() string {
+	return strconv.Itoa(int(t.UnixNano() / 1e6))
+}

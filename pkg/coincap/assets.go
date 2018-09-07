@@ -34,7 +34,7 @@ type Asset struct {
 func (c *Client) Assets(reqParams *AssetsRequest) ([]Asset, *Timestamp, error) {
 
 	// Prepare the query and encode optional parameters
-	req, err := http.NewRequest("GET", baseURL+"assets", nil)
+	req, err := http.NewRequest("GET", c.baseURL+"/assets", nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -64,7 +64,7 @@ func (c *Client) Assets(reqParams *AssetsRequest) ([]Asset, *Timestamp, error) {
 // AssetByID requests an asset by its CoinCap ID
 func (c *Client) AssetByID(id string) (Asset, *Timestamp, error) {
 
-	req, err := http.NewRequest("GET", baseURL+"assets/"+id, nil)
+	req, err := http.NewRequest("GET", c.baseURL+"/assets/"+id, nil)
 	if err != nil {
 		return Asset{}, nil, err
 	}
@@ -85,11 +85,11 @@ func (c *Client) AssetByID(id string) (Asset, *Timestamp, error) {
 // AssetHistoryRequest contains the paramaters for modifying a query to
 // the "/assets/{{id}}/history" endpoint.
 type AssetHistoryRequest struct {
-	Interval Interval `json:"interval"`         // point-in-time interval. minute, hour, and day. Allowed intervals (m1, m15, h1, d1)
-	Start    int      `json:"start,omitempty"`  // start time in unix milliseconds TODO: I should probably use time.Time or Timestamp here
-	End      int      `json:"end,omitempty"`    // end time in unix milliseconds TODO: same as above
-	Limit    int      `json:"limit,omitempty"`  // maximum number of results to return
-	Offset   int      `json:"offset,omitempty"` // skip some of the returned results
+	Interval Interval   `json:"interval"`         // point-in-time interval. minute, hour, and day. Allowed intervals (m1, m15, h1, d1)
+	Start    *Timestamp `json:"start,omitempty"`  // start time in unix milliseconds TODO: I should probably use time.Time or Timestamp here
+	End      *Timestamp `json:"end,omitempty"`    // end time in unix milliseconds TODO: same as above
+	Limit    int        `json:"limit,omitempty"`  // maximum number of results to return
+	Offset   int        `json:"offset,omitempty"` // skip some of the returned results
 }
 
 // AssetHistory contains the USD price of an asset at a given timestamp
@@ -108,7 +108,7 @@ func (c *Client) AssetHistoryByID(id string, reqParams *AssetHistoryRequest) ([]
 	}
 
 	// Prepare the query
-	req, err := http.NewRequest("GET", baseURL+"assets/"+id+"/history", nil)
+	req, err := http.NewRequest("GET", c.baseURL+"/assets/"+id+"/history", nil)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -116,11 +116,11 @@ func (c *Client) AssetHistoryByID(id string, reqParams *AssetHistoryRequest) ([]
 	// encode optional parameters
 	params := req.URL.Query()
 	params.Add("interval", string(reqParams.Interval))
-	if reqParams.Start > 0 {
-		params.Add("start", strconv.Itoa(reqParams.Start))
+	if reqParams.Start != nil {
+		params.Add("start", reqParams.Start.String())
 	}
-	if reqParams.End > 0 {
-		params.Add("end", strconv.Itoa(reqParams.End))
+	if reqParams.End != nil {
+		params.Add("end", reqParams.End.String())
 	}
 	if reqParams.Limit > 0 {
 		params.Add("limit", strconv.Itoa(reqParams.Limit))

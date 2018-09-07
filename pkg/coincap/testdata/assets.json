@@ -1,0 +1,57 @@
+{
+    "data": [
+        {
+            "id": "bitcoin-private",
+            "rank": "88",
+            "symbol": "BTCP",
+            "name": "Bitcoin Private",
+            "supply": "20524490.0000000000000000",
+            "maxSupply": "21000000.0000000000000000",
+            "marketCapUsd": "63207296.8533852870169040",
+            "volumeUsd24Hr": "171080.0899321751528332",
+            "priceUsd": "3.0796037735108296",
+            "changePercent24Hr": "-4.4965710648108234",
+            "vwap24Hr": "2.9800082593887022"
+        },
+        {
+            "id": "bitcoindark",
+            "rank": "98",
+            "symbol": "BTCD",
+            "name": "BitcoinDark",
+            "supply": "1288862.0000000000000000",
+            "maxSupply": null,
+            "marketCapUsd": "53985552.1050997060914036",
+            "volumeUsd24Hr": "20542.0110922446902092",
+            "priceUsd": "41.8862159836349478",
+            "changePercent24Hr": "-5.2396226150659641",
+            "vwap24Hr": "44.7331170795055582"
+        },
+        {
+            "id": "bitcoinz",
+            "rank": "603",
+            "symbol": "BTCZ",
+            "name": "BitcoinZ",
+            "supply": "2592450235.0000000000000000",
+            "maxSupply": "21000000000.0000000000000000",
+            "marketCapUsd": "1837436.1169577096993680",
+            "volumeUsd24Hr": "15801.4411382196887675",
+            "priceUsd": "0.0007087642771888",
+            "changePercent24Hr": "-2.1450155523184225",
+            "vwap24Hr": "0.0007722575186931"
+        },
+        {
+            "id": "bitcoin-red",
+            "rank": "1052",
+            "symbol": "BTCRED",
+            "name": "Bitcoin Red",
+            "supply": "20550001.0000000000000000",
+            "maxSupply": null,
+            "marketCapUsd": "156053.6978963221026992",
+            "volumeUsd24Hr": "0.0000229886450142",
+            "priceUsd": "0.0075938535426992",
+            "changePercent24Hr": "4.3863852657756735",
+            "vwap24Hr": null
+        }
+    ],
+    "timestamp": 1536345407424
+}
