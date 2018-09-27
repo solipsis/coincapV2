@@ -4,7 +4,7 @@ A client library for interacting with the coincap.io V2 api
 
 ## Installation ##
 
-	go get -u github.com/solipsis/coincapV2
+	go get -u github.com/solipsis/coincapV2/...
   
 
 ## Usage ##
@@ -16,6 +16,9 @@ import "github.com/solipsis/coincapV2/pkg/coincap"
 ## Official API Docs ##
 	
 	https://docs.coincap.io/
+
+
+## Examples ##
 
 ### Get Market Data ###
 ```go
@@ -148,3 +151,7 @@ if err != nil {
 	t.Fatal(err)
 }
 ```
+
+## Contributing ##
+
+	Contributions and pull requests welcome
