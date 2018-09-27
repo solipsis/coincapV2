@@ -31,7 +31,7 @@ type Asset struct {
 
 // Assets returns a list of CoinCap Asset entries filtered by the request's
 // search criteria and a timestamp
-func (c *Client) Assets(reqParams *AssetsRequest) ([]Asset, *Timestamp, error) {
+func (c *Client) Assets(reqParams *AssetsRequest) ([]*Asset, *Timestamp, error) {
 
 	// Prepare the query and encode optional parameters
 	req, err := http.NewRequest("GET", c.baseURL+"/assets", nil)
@@ -55,28 +55,28 @@ func (c *Client) Assets(reqParams *AssetsRequest) ([]Asset, *Timestamp, error) {
 	}
 
 	// Unmarshal the deferred json from the data field
-	var assets []Asset
+	var assets []*Asset
 	json.Unmarshal(*ccResp.Data, &assets)
 
 	return assets, ccResp.Timestamp, nil
 }
 
 // AssetByID requests an asset by its CoinCap ID
-func (c *Client) AssetByID(id string) (Asset, *Timestamp, error) {
+func (c *Client) AssetByID(id string) (*Asset, *Timestamp, error) {
 
 	req, err := http.NewRequest("GET", c.baseURL+"/assets/"+id, nil)
 	if err != nil {
-		return Asset{}, nil, err
+		return nil, nil, err
 	}
 
 	// make the request
 	ccResp, err := c.fetchAndParse(req)
 	if err != nil {
-		return Asset{}, nil, err
+		return nil, nil, err
 	}
 
 	// Unmarshal the deferred json from the data field
-	var asset Asset
+	asset := new(Asset)
 	json.Unmarshal(*ccResp.Data, &asset)
 
 	return asset, ccResp.Timestamp, nil
@@ -100,7 +100,7 @@ type AssetHistory struct {
 
 // AssetHistoryByID returns USD price history of a given asset.
 // If no interval is specified 1 hour (h1) is chosen as the default.
-func (c *Client) AssetHistoryByID(id string, reqParams *AssetHistoryRequest) ([]AssetHistory, *Timestamp, error) {
+func (c *Client) AssetHistoryByID(id string, reqParams *AssetHistoryRequest) ([]*AssetHistory, *Timestamp, error) {
 
 	// Default interval to an hour if none was provided
 	if reqParams.Interval == "" {
@@ -137,7 +137,7 @@ func (c *Client) AssetHistoryByID(id string, reqParams *AssetHistoryRequest) ([]
 	}
 
 	// Unmarshal the deferred json from the data field
-	var history []AssetHistory
+	var history []*AssetHistory
 	json.Unmarshal(*ccResp.Data, &history)
 
 	return history, ccResp.Timestamp, nil
