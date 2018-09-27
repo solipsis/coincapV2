@@ -14,8 +14,7 @@ import "github.com/solipsis/coincapV2/pkg/coincap"
 ```
 
 ## Official API Docs ##
-	
-	https://docs.coincap.io/
+https://docs.coincap.io/
 
 
 ## Examples ##
@@ -153,5 +152,4 @@ if err != nil {
 ```
 
 ## Contributing ##
-
-	Contributions and pull requests welcome
+Contributions and pull requests welcome
