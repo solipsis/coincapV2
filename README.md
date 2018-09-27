@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="README.png" alt="coincapV2 api golang"/>
+  <img src="readme.png" alt="coincapV2 api golang"/>
 </p>
 
 # coincapV2 #
@@ -157,6 +157,9 @@ if err != nil {
 	t.Fatal(err)
 }
 ```
+
+## TODO ##
+* Implement websocket endpoints
 
 ## Contributing ##
 Contributions and pull requests welcome
