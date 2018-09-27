@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="README.png" alt="coincapV2 api golang"/>
+</p>
 
 # coincapV2 #
 
