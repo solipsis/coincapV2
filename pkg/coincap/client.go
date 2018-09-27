@@ -8,6 +8,8 @@ import (
 	"net/http"
 )
 
+var baseURL = "https://api.coincap.io/v2"
+
 // Client is a rest client for the CoinCap V2 API
 type Client struct {
 	baseURL    string
@@ -42,7 +44,6 @@ type coincapResp struct {
 // returned by the coincap api
 func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 
-	fmt.Println(req.URL)
 	// make request to the api and read the response
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
@@ -58,8 +59,6 @@ func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 		return nil, fmt.Errorf("Error received status: %d, with body: %s", resp.StatusCode, string(body))
 	}
 
-	//fmt.Println("body:", pretty(string(body)))
-
 	// parse the result
 	ccResp := new(coincapResp)
 	if err := json.Unmarshal(body, ccResp); err != nil {
@@ -73,7 +72,6 @@ func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 	if ccResp.Timestamp == nil {
 		return ccResp, fmt.Errorf(`Response is missing required "timestamp"`)
 	}
-	fmt.Println("pretty:", pretty(ccResp))
 
 	return ccResp, nil
 }

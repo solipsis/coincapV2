@@ -73,7 +73,6 @@ func (c *Client) Candles(reqParams *CandlesRequest) ([]*Candle, *Timestamp, erro
 		params.Add("offset", strconv.Itoa(reqParams.Offset))
 	}
 	req.URL.RawQuery = params.Encode()
-	fmt.Println(req.URL.RawQuery)
 
 	// make the request
 	ccResp, err := c.fetchAndParse(req)

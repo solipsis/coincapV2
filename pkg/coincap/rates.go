@@ -2,7 +2,6 @@ package coincap
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 )
 
@@ -42,7 +41,6 @@ func (c *Client) Rates() ([]*Rate, *Timestamp, error) {
 // RateByID returns the USD rate for the given asset identifier
 func (c *Client) RateByID(id string) (*Rate, *Timestamp, error) {
 	req, err := http.NewRequest("GET", c.baseURL+"/rates/"+id, nil)
-	fmt.Println(req)
 	if err != nil {
 		return nil, nil, err
 	}
