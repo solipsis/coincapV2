@@ -75,9 +75,3 @@ func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 
 	return ccResp, nil
 }
-
-// JSON pretty print
-func pretty(v interface{}) string {
-	str, _ := json.MarshalIndent(v, "", "    ")
-	return string(str)
-}

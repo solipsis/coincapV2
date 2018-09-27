@@ -1,6 +1,8 @@
+
 # coincapV2 #
 
-A client library for interacting with the coincap.io V2 api
+[![GoDoc](https://godoc.org/github.com/solipsis/coincapV2?status.svg)](https://godoc.org/github.com/solipsis/coincapV2) [![Go Report Card](https://goreportcard.com/badge/github.com/solipsis/coincapV2)](https://goreportcard.com/report/github.com/solipsis/coincapV2) 
+client library for interacting with the coincap.io V2 api
 
 ## Installation ##
 
