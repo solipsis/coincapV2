@@ -12,6 +12,7 @@ A client library for interacting with the coincap.io V2 api
 ```go
 import "github.com/solipsis/coincapV2/pkg/coincap"
 ```
+GoDoc: https://godoc.org/github.com/solipsis/coincapV2/pkg/coincap
 
 ## Official API Docs ##
 https://docs.coincap.io/
