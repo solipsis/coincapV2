@@ -55,7 +55,7 @@ func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 	}
 	defer resp.Body.Close()
 
-	// check if the serfer sent compressed data
+	// check if the server sent compressed data
 	var reader io.ReadCloser
 	switch resp.Header.Get("Content-Encoding") {
 	case "gzip":
