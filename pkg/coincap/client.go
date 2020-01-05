@@ -66,7 +66,7 @@ func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 		}
 		defer reader.Close()
 	default:
-		// otherwise set the reader to the response bodt
+		// otherwise set the reader to the response body
 		reader = resp.Body
 	}
 
