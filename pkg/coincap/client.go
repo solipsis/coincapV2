@@ -2,8 +2,10 @@
 package coincap
 
 import (
+	"compress/gzip"
 	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"net/http"
 )
@@ -43,6 +45,8 @@ type coincapResp struct {
 // fetchAndParse returns the json below the top level "data" key
 // returned by the coincap api
 func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
+	// add the gzip compression header
+	req.Header.Add("Accept-Encoding", "gzip")
 
 	// make request to the api and read the response
 	resp, err := c.httpClient.Do(req)
@@ -51,7 +55,23 @@ func (c *Client) fetchAndParse(req *http.Request) (*coincapResp, error) {
 	}
 	defer resp.Body.Close()
 
-	body, err := ioutil.ReadAll(resp.Body)
+	// check if the server sent compressed data
+	var reader io.ReadCloser
+	switch resp.Header.Get("Content-Encoding") {
+	case "gzip":
+		// if the content encoding was gzip instantiate a new gzip reader
+		reader, err = gzip.NewReader(resp.Body)
+		if err != nil {
+			return nil, err
+		}
+		defer reader.Close()
+	default:
+		// otherwise set the reader to the response body
+		reader = resp.Body
+	}
+
+	// now read the body out of the reader
+	body, err := ioutil.ReadAll(reader)
 	if err != nil {
 		return nil, err
 	}

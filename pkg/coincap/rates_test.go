@@ -121,7 +121,7 @@ func TestRatesMalformed(t *testing.T) {
 
 	rates, _, err := client.Rates()
 	if err == nil {
-		t.Errorf("Expected malformed json %s", rates)
+		t.Errorf("Expected malformed json %+v", rates)
 	}
 }
 
