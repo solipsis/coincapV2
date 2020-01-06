@@ -1,4 +1,4 @@
-module github.com/haukened/coincapV2/pkg/coincap
+module github.com/solipsis/coincapV2/pkg/coincap
 
 go 1.13
 
